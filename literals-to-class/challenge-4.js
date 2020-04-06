@@ -80,7 +80,7 @@ instanceB.addString('8');
 instanceB.addString('I0');
 instanceB.addString('9');
 
-const test8a = JSON.stringify(instanceA.state) === '{"evens":["2","","12"],"odds":["3","1"],"nanys":["e","*"]}';
+const test8a = JSON.stringify(instanceA.state) === '{"evens":["","2","12"],"odds":["3","1"],"nanys":["e","*"]}';
 const test8b = JSON.stringify(instanceB.state) === '{"evens":["-0","8"],"odds":["5","9"],"nanys":["!","I0"]}';
 console.assert(test8a, 'Test 8.A - new values');
 console.assert(test8b, 'Test 8.B');
