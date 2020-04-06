@@ -52,7 +52,7 @@ const test3b = !instanceB.hasOwnProperty('addString') && !instanceB.hasOwnProper
 console.assert(test3a, 'Test 3.A - not-own properties');
 console.assert(test3b, 'Test 3.B');
 
-const test4a = JSON.stringify(instanceA.state) === '{"evens":["2",""],"odds":["3"],"nanys":["e"]}';
+const test4a = JSON.stringify(instanceA.state) === '{"evens":["","2"],"odds":["3"],"nanys":["e"]}';
 const test4b = JSON.stringify(instanceB.state) === '{"evens":["-0"],"odds":["5"],"nanys":["!"]}';
 console.assert(test4a, 'Test 4.A - initial values');
 console.assert(test4b, 'Test 4.B');
