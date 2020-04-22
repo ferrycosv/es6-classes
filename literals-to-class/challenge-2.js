@@ -28,7 +28,25 @@ const literalB = {
 
 // the solution
 
-class MaxMin { };
+class MaxMin { 
+  constructor() {
+    this.state = {
+      max: -Infinity,
+      min: Infinity
+    };
+  }
+  get spread() {
+    return this.state.max - this.state.min;
+  }
+  addNumber(newNum) {
+    if (this.state.min > newNum) {
+      this.state.min = newNum;
+    }
+    if (this.state.max < newNum) {
+      this.state.max = newNum;
+    }
+  }
+ };
 
 // these two lines are correct! don't change them
 const instanceA = new MaxMin();
